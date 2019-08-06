@@ -9,17 +9,12 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
- 
-ActiveRecord::Schema.define(version: 0) do
- 
+
 ActiveRecord::Schema.define(version: 2019_08_02_202255) do
- 
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
- 
- 
   create_table "matches", force: :cascade do |t|
     t.integer "black"
     t.integer "white"
@@ -42,5 +37,4 @@ ActiveRecord::Schema.define(version: 2019_08_02_202255) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
- 
 end
