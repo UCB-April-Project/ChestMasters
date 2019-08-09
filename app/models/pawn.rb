@@ -1,4 +1,4 @@
-class pawn < ChessPiece
+class Pawn < ChessPiece
     belongs_to :match
 
     #possible future functions

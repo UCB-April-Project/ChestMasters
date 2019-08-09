@@ -1,4 +1,4 @@
-class queen < ChessPiece
+class Queen < ChessPiece
     belongs_to :match
 
     #possible future functions

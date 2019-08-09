@@ -1,4 +1,4 @@
-class bishop < ChessPiece
+class Bishop < ChessPiece
     belongs_to :match
 
     #possible future functions
