@@ -1,4 +1,4 @@
-class Match < ApplicationRecord
+class Game < ApplicationRecord
 
     #converts the stored string to an array
     serialize :board_state, Array
