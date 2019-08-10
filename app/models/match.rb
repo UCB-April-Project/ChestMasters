@@ -5,4 +5,6 @@ class Match < ApplicationRecord
 
     #belongs_to :user
     #uncomment when the user table is created for device
+    has_many :chess_pieces
+
 end
