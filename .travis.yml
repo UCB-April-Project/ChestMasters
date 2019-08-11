@@ -2,5 +2,8 @@
 2. rvm:
    - 2.5.3 
    - jruby
- 
+3. script: 
+   - bundle execrake db:setup
+   - bundle exec rake spec
+
 
