@@ -1,5 +1,4 @@
 class Knight < ChessPiece
-    belongs_to :match
 
     #possible future functions
     
