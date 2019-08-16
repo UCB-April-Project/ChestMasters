@@ -5,10 +5,6 @@ FactoryBot.define do
   end
 
   factory :chess_piece do
-    x_pos {}
-    y_pos {}
-    color {}
-    type {}
 
     association :game
   end

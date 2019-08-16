@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 2019_08_13_224659) do
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "game_id"
     t.integer "x_pos"
     t.integer "y_pos"
     t.string "color"
+    t.integer "game_id"
   end
 
   create_table "games", force: :cascade do |t|
