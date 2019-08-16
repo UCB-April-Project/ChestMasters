@@ -1,0 +1,2 @@
+module BoardStatesHelper
+end

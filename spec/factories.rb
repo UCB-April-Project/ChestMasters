@@ -1,4 +1,8 @@
 FactoryBot.define do
+  factory :board_state do
+    
+  end
+
   factory :chess_piece do
     
   end
