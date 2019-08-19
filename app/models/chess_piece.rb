@@ -1,7 +1,7 @@
 class ChessPiece < ApplicationRecord
     belongs_to :game
 
-    def is_obstructed?(x, y)
+    def obstucted?(x, y)
        game.chess_piece.where("x_pos = ? and y_pos = ?", x, y).present?
     end
 
@@ -12,7 +12,7 @@ class ChessPiece < ApplicationRecord
         while y =! sy && x === sx
             y_move = (y <=> sy)
             sy += y_move
-            return true if is_obstructed?(x, y_move)
+            return true if obstructed?(x, y_move)
         end
         false
     end
@@ -24,7 +24,7 @@ class ChessPiece < ApplicationRecord
         while x =! sx && y === sy
             x_move = (x <=> sx)
             sx += x_move
-            return true if is_obstructed?(x_move, y)
+            return true if obstructed?(x_move, y)
         end
         false
     end
@@ -39,10 +39,17 @@ class ChessPiece < ApplicationRecord
         while sx =! x && sy =! y
             sx += x_spot
             sy += y_spot
-            return true if is_obstructed?(sx, sy)
+            return true if obstructed?(sx, sy)
         end
         false
     end
+
+    def is_obstructed?
+        return true if vert_obstructed?(x, y)
+        return true if horz_obstructed?(x, y)
+        return true if diag_obstructed?(x, y)
+    end
+
     
 
 end
