@@ -1,4 +1,5 @@
 FactoryBot.define do
+  
   factory :game do
     black {"1"}
     white {"1"}
@@ -8,7 +9,7 @@ FactoryBot.define do
 
     association :game
   end
-
+ 
   factory :task do
     title { "Do the dishes" }
     done { false }
