@@ -1,12 +1,17 @@
 FactoryBot.define do
-  factory :board_state do
-    
+
+  
+  factory :game do
+    black {"1"}
+    white {"1"}
+
   end
 
   factory :chess_piece do
-    
-  end
 
+    association :game
+  end
+ 
   factory :task do
     title { "Do the dishes" }
     done { false }

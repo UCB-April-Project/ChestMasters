@@ -2,11 +2,16 @@ class GamesController < ApplicationController
 
 
   def index
-     @games = Game.all
+
+    @games = Game.available
   end
 
   def new
-     @games = Game.new
+    @game = Game.new
+  end
+
+  def create 
+
   end
 
   def create
