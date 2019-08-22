@@ -8,7 +8,6 @@ class Game < ApplicationRecord
     #uncomment when the user table is created for device
     has_many :chess_pieces
     scope :available, -> { where('(white IS NULL AND black IS NOT NULL) OR (black IS NULL AND white IS NOT NULL)') }
-    
 
     def populate_board!
         #    1  2  3  4  5  6  7  8
