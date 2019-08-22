@@ -4,7 +4,7 @@
    - jruby
 3. script: 
  
-   - bundle execrake db:setup
+   - bundle exec rake db:setup
    - bundle exec rake spec
 
 
