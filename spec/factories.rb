@@ -6,12 +6,10 @@ FactoryBot.define do
   end
 
   factory :chess_piece do
-
+    type {"King"}
+    x_pos {5}
+    y_pos {5}
+    color {"black"}
     association :game
-  end
- 
-  factory :task do
-    title { "Do the dishes" }
-    done { false }
   end
 end

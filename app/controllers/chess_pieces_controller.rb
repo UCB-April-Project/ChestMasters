@@ -17,6 +17,11 @@ class ChessPiecesController < ApplicationController
         render status: :ok
     end
 
+    def destroy
+        current_piece.destroy
+        render status: :ok
+    end
+    
     private
 
     helper_method :current_piece
