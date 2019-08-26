@@ -14,4 +14,8 @@ FactoryBot.define do
     title { "Do the dishes" }
     done { false }
   end
+
+  factory :king do
+  end
+  
 end
