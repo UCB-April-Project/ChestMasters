@@ -21,8 +21,8 @@ class Game < ApplicationRecord
         # 1  r  k  b  q  K  b  k  r     white side
 
         for i in 1..8 do
-            chess_pieces.create(x_pos: i, y_pos: 2, color: 'white', type: 'Pawn')
-            chess_pieces.create(x_pos: i, y_pos: 7, color: 'black', type: 'Pawn')
+            chess_pieces.create(x_pos: i, y_pos: 2, color: 'white', type: 'Pawn', image: image_url('w_pawn.png'))
+            chess_pieces.create(x_pos: i, y_pos: 7, color: 'black', type: 'Pawn', image: image_url('b_pawn.png'))
         end
 
         #place remaining white pieces
