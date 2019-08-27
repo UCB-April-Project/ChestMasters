@@ -1,4 +1,12 @@
 FactoryBot.define do
+  factory :queen do
+    
+  end
+
+  factory :bishop do
+    
+  end
+
   
   factory :game do
     black {"1"}
