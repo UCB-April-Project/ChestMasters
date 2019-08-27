@@ -7,12 +7,12 @@ class Knight < ChessPiece
 
     def valid_move?(x_move, y_move)
 
-        #find move distances 
-        y_change = y_move - y_pos
-        x_change = x_move - x_pos
+        #find move distances
+        y_change = (y_move - y_pos).abs
+        x_change = (x_move - x_pos).abs
 
         #valid move if over 2 up 1 or the reverse
-        return ((y.change.abs == 2 && x_change.abs == 1)||(y.change.abs == 1 && x_change.abs == 2))
+       return ((y.change == 2 && x_change == 1)||(y.change == 1 && x_change == 2))
     end
 
 end
