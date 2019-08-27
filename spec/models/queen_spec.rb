@@ -23,7 +23,7 @@ RSpec.describe Queen, type: :model do
     it "should return false for in valid moves" do
       game = Game.create
       queen = FactoryBot.create :queen, x_pos: 5, y_pos: 5, game_id: game.id
-      expect(queen.valid_move?(4, 5)).to eq(false)
+      expect(queen.valid_move?(7, 6)).to eq(false)
     end
   end
 end

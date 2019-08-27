@@ -1,4 +1,8 @@
 FactoryBot.define do
+  factory :knight do
+    
+  end
+
   factory :queen do
     
   end
