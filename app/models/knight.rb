@@ -12,7 +12,7 @@ class Knight < ChessPiece
         x_change = (x_move - x_pos).abs
 
         #valid move if over 2 up 1 or the reverse
-       return ((y.change == 2 && x_change == 1)||(y.change == 1 && x_change == 2))
+       return ((y_change == 2 && x_change == 1)||(y_change == 1 && x_change == 2))
     end
 
 end
