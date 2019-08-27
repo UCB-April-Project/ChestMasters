@@ -11,7 +11,7 @@ RSpec.describe Queen, type: :model do
       expect(queen.valid_move?(6, 4)).to eq(true)
     end
 
-    it "should test verticals" do
+    it "should test vertical/horizontal" do
       game = Game.create
       queen = FactoryBot.create :queen, x_pos: 5, y_pos: 5, game_id: game.id
       expect(queen.valid_move?(4, 5)).to eq(true)
