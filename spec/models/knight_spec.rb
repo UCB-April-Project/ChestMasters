@@ -20,5 +20,11 @@ RSpec.describe Knight, type: :model do
       knight = FactoryBot.create :knight, x_pos: 5, y_pos: 5, game_id: game.id
       expect(knight.valid_move?(4, 5)).to eq(false)
     end
+
+    it "should return false for current location" do
+      game = Game.create
+      knight = FactoryBot.create :knight, x_pos: 5, y_pos: 5, game_id: game.id
+      expect(knight.valid_move?(5, 5)).to eq(false)
+    end
   end
 end

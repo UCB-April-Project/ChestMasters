@@ -16,5 +16,11 @@ RSpec.describe Bishop, type: :model do
       bishop = FactoryBot.create :bishop, x_pos: 5, y_pos: 5, game_id: game.id
       expect(bishop.valid_move?(4, 5)).to eq(false)
     end
+
+    it "should return false for current location" do
+      game = Game.create
+      bishop = FactoryBot.create :bishop, x_pos: 5, y_pos: 5, game_id: game.id
+      expect(bishop.valid_move?(5, 5)).to eq(false)
+    end
   end
 end
