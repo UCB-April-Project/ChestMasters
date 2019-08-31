@@ -18,4 +18,7 @@ FactoryBot.define do
   factory :king do
   end
   
+  factory :rook do
+  end
+  
 end
