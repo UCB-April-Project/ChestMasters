@@ -11,8 +11,11 @@ class Queen < ChessPiece
             return false
         end
 
+        slope = 0
+        if (x_move != x_pos) && (y_move != y_pos)
         #find slope of line between goal and current location
-        slope = ((y_move - y_pos)/(x_move - x_pos)).abs
+            slope = ((y_move - y_pos)/(x_move - x_pos)).abs
+        else
 
         #valid move if slope is 1 or -1
         #also valid if x or y is 0
