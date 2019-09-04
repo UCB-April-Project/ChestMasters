@@ -12,33 +12,34 @@ class GamesController < ApplicationController
   def show
   end
 
-  def update
-      if game.valid? 
-        game.update_attributes matches_params
-        game.assign_chess_pieces
-        return redirect_to game_path game
-      end
+  def create
+    @game =Game.create(game_params)
+    if game.valid?
+      redirect_to game_path(@game)
+    end
+  end
 
-      render :new, status: unprocessable_entity 
+  def update
+    @game = Game.find(parmas[:id])
+
+      if current_user && @game.black == nil
+        @game.update_attributes(:black, current_user.id)
+      end
   end  
    
   
-  def game
-      @matches ||= Matches.where(id: params[:id]).last
-  end
+ 
+
+  private
   
-  def matches_params
-      params.require( :matches).permit(
-        :board_state,
-        :white,
-        :black)    
+  def game_params
+      params.require(:game).permit(:board_state, :white, :black)    
   end
 
+  
 
-  def create
-    @game =Game.create(game_params)
-    redirect_to game_path(@game)
-  end
+
+  
 
 
 
