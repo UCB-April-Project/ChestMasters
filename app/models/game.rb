@@ -27,29 +27,29 @@ class Game < ApplicationRecord
 
         #place remaining white pieces
         chess_pieces.create(x_pos: 1, y_pos: 1, color: 'white', type: 'Rook')
-        chess_pieces.create(x_pos: 1, y_pos: 8, color: 'white', type: 'Rook')
+        chess_pieces.create(x_pos: 8, y_pos: 1, color: 'white', type: 'Rook')
 
-        chess_pieces.create(x_pos: 1, y_pos: 2, color: 'white', type: 'Knight')
-        chess_pieces.create(x_pos: 1, y_pos: 7, color: 'white', type: 'Knight')
+        chess_pieces.create(x_pos: 2, y_pos: 1, color: 'white', type: 'Knight')
+        chess_pieces.create(x_pos: 7, y_pos: 1, color: 'white', type: 'Knight')
 
-        chess_pieces.create(x_pos: 1, y_pos: 3, color: 'white', type: 'Bishop')
-        chess_pieces.create(x_pos: 1, y_pos: 6, color: 'white', type: 'Bishop')
+        chess_pieces.create(x_pos: 3, y_pos: 1, color: 'white', type: 'Bishop')
+        chess_pieces.create(x_pos: 6, y_pos: 1, color: 'white', type: 'Bishop')
 
-        chess_pieces.create(x_pos: 1, y_pos: 4, color: 'white', type: 'Queen')
-        chess_pieces.create(x_pos: 1, y_pos: 5, color: 'white', type: 'King')
+        chess_pieces.create(x_pos: 4, y_pos: 1, color: 'white', type: 'Queen')
+        chess_pieces.create(x_pos: 5, y_pos: 1, color: 'white', type: 'King')
 
         #place remaining black pieces
-        chess_pieces.create(x_pos: 8, y_pos: 1, color: 'black', type: 'Rook')
+        chess_pieces.create(x_pos: 1, y_pos: 8, color: 'black', type: 'Rook')
         chess_pieces.create(x_pos: 8, y_pos: 8, color: 'black', type: 'Rook')
 
-        chess_pieces.create(x_pos: 8, y_pos: 2, color: 'black', type: 'Knight')
-        chess_pieces.create(x_pos: 8, y_pos: 7, color: 'black', type: 'Knight')
+        chess_pieces.create(x_pos: 2, y_pos: 8, color: 'black', type: 'Knight')
+        chess_pieces.create(x_pos: 7, y_pos: 8, color: 'black', type: 'Knight')
 
-        chess_pieces.create(x_pos: 8, y_pos: 3, color: 'black', type: 'Bishop')
-        chess_pieces.create(x_pos: 8, y_pos: 6, color: 'black', type: 'Bishop')
+        chess_pieces.create(x_pos: 3, y_pos: 8, color: 'black', type: 'Bishop')
+        chess_pieces.create(x_pos: 6, y_pos: 8, color: 'black', type: 'Bishop')
 
-        chess_pieces.create(x_pos: 8, y_pos: 4, color: 'black', type: 'Queen')
-        chess_pieces.create(x_pos: 8, y_pos: 5, color: 'black', type: 'King')
+        chess_pieces.create(x_pos: 4, y_pos: 8, color: 'black', type: 'Queen')
+        chess_pieces.create(x_pos: 5, y_pos: 8, color: 'black', type: 'King')
         
     end
 
