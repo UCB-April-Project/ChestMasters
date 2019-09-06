@@ -33,6 +33,6 @@ class ChessPiecesController < ApplicationController
     end
 
     def piece_params
-        params.require(:chess_pieces).permit(:x_pos, :y_pos)
+        params.permit(:x_pos, :y_pos)
     end
 end
