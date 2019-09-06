@@ -1,18 +1,15 @@
 class ChessPiecesController < ApplicationController
 
     def show
-        moves_x = []
-        moves_y = []
+        moves = []
         for i in 1..8
             for j in 1..8
                 if current_piece.valid_move?(i,j) == true
-                    moves_x << i
-                    moves_y << j
+                    moves << "(#{i},#{j})"
                 end
             end
         end
-        #render :json moves_x
-        #render :json moves_y
+        render :json => moves
     end
 
     def update
