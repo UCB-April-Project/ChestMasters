@@ -2,10 +2,7 @@
 
 <h2> 
 
-  <% @games.each do |game| %>
-    <% if game.white != nil && game.black == nil %>
-      <%= link_to 'Avaibale game', game_path(@game), :method => :get %>
-    <% end %>
-    <br />
-  <% end %>
- </h2>
+  <% link_to '@games.available', games_path %>
+ 
+</h2>
+
