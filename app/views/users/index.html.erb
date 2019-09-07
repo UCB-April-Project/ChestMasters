@@ -1,5 +1,10 @@
 <h1>Hello Team</h1>
 
 <div class="links">
-  <%= link_to 'Start a game', games_path %>
+  <%= form_for @game do |f| %>
+    <%= fields_for :game do |ff| %>
+      <%= ff.hidden_field :white, value: current_user.id %>
+      <%= ff.submit 'Start a Game' %>
+    <% end %>
+  <% end %>
 </div>

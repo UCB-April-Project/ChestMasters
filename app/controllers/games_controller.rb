@@ -13,8 +13,9 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game =Game.create(game_params)
-    if game.valid?
+    @game = Game.create(game_params)
+
+    if @game.valid?
       redirect_to game_path(@game)
     end
   end
@@ -25,21 +26,21 @@ class GamesController < ApplicationController
       if current_user && @game.black == nil
         @game.update_attributes(:black, current_user.id)
       end
-  end  
-   
-  
- 
-
-  private
-  
-  def game_params
-      params.require(:game).permit(:board_state, :white, :black)    
   end
 
-  
 
 
-  
+
+  private
+
+  def game_params
+      params.require(:game).permit(:board_state, :white, :black)
+  end
+
+
+
+
+
 
 
 
