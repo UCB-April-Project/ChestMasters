@@ -1,0 +1,36 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - chess-pgdata:/var/lib/postgresql/data
+
+  web:
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - ~/.gitconfig:/root/.gitconfig
+      - bundler_gems:/usr/local/bundle/
+      - vscode-extension:/root/.vscode-remote
+    ports:
+      - "1234"
+      - "3000:3000"
+      - "7658"
+    environment:
+      BUNDLE_JOBS: 4
+      PORT: 3000
+
+      NODE_ENV: development
+      DB_HOSTNAME: db
+    depends_on:
+      - db
+
+volumes:
+  chess-pgdata:
+  bundler_gems:
+  vscode-extension:

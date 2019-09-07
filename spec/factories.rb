@@ -1,4 +1,16 @@
 FactoryBot.define do
+  factory :knight do
+    
+  end
+
+  factory :queen do
+    
+  end
+
+  factory :bishop do
+    
+  end
+
   
   factory :game do
     black {"1"}
@@ -16,6 +28,9 @@ FactoryBot.define do
   end
 
   factory :king do
+  end
+  
+  factory :rook do
   end
   
 end
