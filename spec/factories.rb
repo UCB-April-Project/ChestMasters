@@ -21,11 +21,6 @@ FactoryBot.define do
 
     association :game
   end
- 
-  factory :task do
-    title { "Do the dishes" }
-    done { false }
-  end
 
   factory :king do
   end
