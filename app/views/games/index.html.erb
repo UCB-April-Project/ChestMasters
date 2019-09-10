@@ -2,7 +2,14 @@
 
 <h2> 
 
-  <% link_to '@games.available', games_path %>
+<%= @games.available.to_json %>
+
+
+  <% @games.available do |game| %>
+    <% if current_user && current_user == game.white %>
+      <%= link_to 'Join Game', game_path(@game) %>
+    <% end %>
+  <% end %> %>
  
 </h2>
 
