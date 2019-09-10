@@ -1,8 +1,16 @@
 <h1>Available Games</h1>
 
-<h2> 
+<h2>
+ 
+<%= @games.available.to_json %>
 
-  <% @games.each do |game| %>
-    <br />
-  <% end %>
- </h2>
+
+  <% @games.available do |game| %>
+    <% if current_user && current_user == game.white %>
+      <%= link_to 'Join Game', game_path(@game) %>
+    <% end %>
+  <% end %> %>
+ 
+
+</h2>
+

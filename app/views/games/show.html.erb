@@ -1,14 +1,29 @@
 <h1>chessboard</h1>
 <body>
 
-<table>
-  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-</table>
+<div id="myBoard" style="width: 600px"></div>
+<button id="startBtn">Start Position</button>
+<button id="clearBtn">Clear Board</button>
+
+
+<script>
+   function pieceTheme (piece) {
+  if (piece.search(/w/) !== -1) {
+    return 'app/assets/images/' + piece + '.png'
+  }
+  return 'app/assets/images/' + piece + '.png'
+}
+
+ var config = {
+    pieceTheme: 'app/assets/images/{piece}.png',
+    position: 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R'
+  }
+
+  var board = Chessboard('myBoard', 'config')
+
+  $('#startBtn').on('click', myBoard.start)
+  $('#clearBtn').on('click', myBoard.clear)
+</script>
+  
+
 </body>
